@@ -1,0 +1,23 @@
+// write a program to print the sum of numbers from m to n using recursion
+
+
+#include<stdio.h>
+int add(int i,int n,int sum)
+{
+    if(i>n)
+    {
+        return sum;
+    }
+    sum=sum+i;
+    add(i+1,n,sum);
+}
+int main()
+{
+    int sum=0;
+    int m,n;
+    printf("enter the start and end rangevalue\n");
+    scanf("%d %d",&m,&n);
+    int sum1=add(m,n,0);
+    printf("sum1=%d\n",sum1);
+    return 0;
+}
